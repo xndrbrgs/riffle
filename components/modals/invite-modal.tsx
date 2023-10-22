@@ -36,7 +36,7 @@ export const InviteModal = () => {
 
     setTimeout(() => {
       setCopied(false);
-    }, 1000);
+    }, 3000);
   };
 
   const onNew = async () => {
@@ -74,7 +74,7 @@ export const InviteModal = () => {
             />
             <Button disabled={isLoading} onClick={onCopy} size="icon">
               {copied ? (
-                <Check className="w-4 h-4" />
+                <Check className="w-4 h-4 text-[#FF3B00] transition" />
               ) : (
                 <Copy className="w-4 h-4" />
               )}
@@ -88,7 +88,7 @@ export const InviteModal = () => {
             variant="link"
           >
             Generate a new link
-            <RefreshCw className="w-4 h-4 ml-2" />
+            <RefreshCw className="w-4 h-4 ml-2 hover:rotate-90 transition" />
           </Button>
         </div>
       </DialogContent>
