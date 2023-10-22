@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+
 import { ClerkProvider } from "@clerk/nextjs";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
+
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -20,14 +23,14 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(font.className,
-          'bg-[#F4F0E6] dark:bg-[#1A1A1A]')}>
+        <body className={cn(font.className, "bg-[#F4F0E6] dark:bg-[#1A1A1A]")}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem={false}
-            storageKey='riffle-theme'
+            storageKey="riffle-theme"
           >
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>
