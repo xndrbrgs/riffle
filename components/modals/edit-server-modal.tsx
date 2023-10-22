@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
 
 import {
   Dialog,
@@ -40,11 +41,12 @@ const formSchema = z.object({
   }),
 });
 
-export const CreateServerModal = () => {
-  const { isOpen, onClose, type } = useModal();
+export const EditServerModal = () => {
+  const { isOpen, onClose, type, data } = useModal();
   const router = useRouter();
 
-  const isModalOpen = isOpen && type === "createServer";
+  const isModalOpen = isOpen && type === "editServer";
+  const { server } = data;
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -54,11 +56,18 @@ export const CreateServerModal = () => {
     },
   });
 
+  useEffect(() => {
+    if (server) {
+      form.setValue("name", server.name);
+      form.setValue("imageUrl", server.imageUrl);
+    }
+  }, [server, form]);
+
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      await axios.post("/api/servers", values);
+      await axios.patch(`/api/servers/${server?.id}`, values);
       form.reset();
       router.refresh();
       onClose();
@@ -132,7 +141,7 @@ export const CreateServerModal = () => {
                 disabled={isLoading}
                 className="hover:scale-105 transition"
               >
-                Create
+                Save
               </Button>
             </DialogFooter>
           </form>
