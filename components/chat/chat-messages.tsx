@@ -103,7 +103,7 @@ export const ChatMessages = ({
           ) : (
             <button
               className="text-zinc-500 hover:text-zinc-600 dark:text-zinc-400
-             hover:dark:text-zinc-300 transition text-sm my-4 border py-2 px-3 rounded-full bg-zinc-700 hover:bg-zinc-700/50 
+             hover:dark:text-zinc-300 transition text-sm my-4 border py-2 px-3 rounded-full bg-zinc-100 dark:bg-zinc-700 hover:dark:bg-zinc-700/50 hover:bg-zinc-200
              shadow-md"
               onClick={() => fetchNextPage()}
             >

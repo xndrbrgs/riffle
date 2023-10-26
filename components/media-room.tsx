@@ -62,7 +62,7 @@ export const MediaRoom = ({ chatId, video, audio }: MediaRoomProps) => {
       serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_URL}
       // Use the default LiveKit theme for nice styles.
       data-lk-theme="default"
-      style={{ height: "88dvh" }}
+      style={{ height: "100dvh" }}
     >
       {/* Your custom component with basic video conferencing functionality. */}
       <MyVideoConference />
