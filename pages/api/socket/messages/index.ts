@@ -1,6 +1,6 @@
-import { db } from './../../../lib/db';
+import { db } from '../../../../lib/db';
 import { currentProfilePages } from '@/lib/current-profile-pages';
-import { NextApiResponseServerIo } from './../../../types';
+import { NextApiResponseServerIo } from '../../../../types';
 import { NextApiRequest } from 'next';
 
 export default async function handler(

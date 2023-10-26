@@ -30,6 +30,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "cmdk": "^0.2.0",
+    "date-fns": "^2.30.0",
     "emoji-mart": "^5.5.2",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.288.0",
@@ -55,11 +56,14 @@
     "@types/react-dom": "^18",
     "@types/uuid": "^9.0.6",
     "autoprefixer": "^10",
+    "bufferutil": "^4.0.7",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
     "postcss": "^8",
     "prisma": "^5.4.2",
+    "supports-color": "^8.1.1",
     "tailwindcss": "^3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "utf-8-validate": "^5.0.10"
   }
 }
