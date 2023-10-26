@@ -55,7 +55,7 @@ export const useChatScroll = ({
             return distanceFromBottom <= 100;
         }
 
-        if(shouldAutoScroll()) {
+        if (shouldAutoScroll()) {
             setTimeout(() => {
                 bottomRef.current?.scrollIntoView({
                     behavior: 'smooth'
