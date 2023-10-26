@@ -9,6 +9,7 @@ import qs from "query-string";
 import { Form, FormControl, FormField, FormItem } from "../ui/form";
 import { Input } from "../ui/input";
 import { Plus, Smile } from "lucide-react";
+import { useModal } from "@/hooks/use-modal-store";
 
 interface ChatInputProps {
   apiUrl: string;
@@ -22,6 +23,8 @@ const formSchema = z.object({
 });
 
 export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
+  const { onOpen } = useModal();
+
   const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       content: "",
@@ -55,7 +58,7 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
                 <div className="relative p-4 pb-6">
                   <button
                     type="button"
-                    onClick={() => {}}
+                    onClick={() => onOpen("messageFile", { apiUrl, query })}
                     className="absolute top-7 left-8 h-[24px] w-[24px] bg-zinc-500 dark:bg-[#ff3b00] hover:bg-zinc-600 dark:hover:bg-[#ff3c00b7] transition rounded-full flex items-center justify-center p-1"
                   >
                     <Plus className="text-white" />
