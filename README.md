@@ -16,11 +16,6 @@ $ npm run build
 $ npm run start
 ```
 
-## Links
-
-- [Website](https://alex-borges.webflow.io/)
-- [GitHub](https://github.com/xndrbrgs)
-
 ## Deployed
 
 - [Live Website](https://riffle-production.up.railway.app/)
