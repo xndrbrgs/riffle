@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About
 
-## Getting Started
+A text and video service with features like realtime chat app, roles, file sharing, servers...etc,
+- React is used along with Next.js to power front-end.
+- React Routing and TypeScript with Error handling between pages.
+- Clerk is used for authentication and PlanetScale to store messages, users and servers.
+- Tailwwind is used to style components for UI.
 
-First, run the development server:
+## Installation
+```js
+#install dependencies
+$ npm install
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+build for production and launch server
+$ npm run build
+$ npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Links
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Website](https://alex-borges.webflow.io/)
+- [GitHub]([https://github.com/arihant-jain-09/discord-clone](https://github.com/xndrbrgs))
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployed
 
-## Learn More
+- [GitHub](https://riffle-production.up.railway.app/)
 
-To learn more about Next.js, take a look at the following resources:
+## Features
+-   Real time messaging 
+-   Loads User Data upon login (Servers, Channels, Roles)
+-   Creation and Joining Servers
+-   Creation of Channels in a Server
+-   Server Settings (Change name and delete)
+-   Channel Settings (Change name and delete)
+-   Reply to messages
+-   Upload and send images, audio files
+-   Timestamps for messages
+-   Create new Roles unique to each server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contribution
+Contributions are always Welcome...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   Fork the repository
+-   Improve current program by
+    -   improving functionality
+    -   adding new feature
+    -   bug fixes
+-   Push your work and Create a Pull Request
