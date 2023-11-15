@@ -19,11 +19,11 @@ $ npm run start
 ## Links
 
 - [Website](https://alex-borges.webflow.io/)
-- [GitHub]([https://github.com/arihant-jain-09/discord-clone](https://github.com/xndrbrgs))
+- [GitHub](https://github.com/xndrbrgs)
 
 ## Deployed
 
-- [GitHub](https://riffle-production.up.railway.app/)
+- [Live Website](https://riffle-production.up.railway.app/)
 
 ## Features
 -   Real time messaging 
